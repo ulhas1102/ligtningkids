@@ -77,8 +77,35 @@
         left: 15px;
         color: #212121;
         pointer-events: none;
-        transform: translateY(0.6rem);
+        transform: translateY(-50%);
         transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+        background-color: #fff;
+        z-index: 1;
+        font-size: 14px;
+        padding: 0 4px;
+        border-radius: 3px !important;
+      }
+      #registrationSection .services__card,
+      #loginSection .services__card {
+        background-color: #dadada;
+        padding: 10px 30px;
+        margin: 10px 10px;
+        height: 100%;
+        /* border: 1px solid #000; */
+        border: 0.4px solid #d38a15;
+        border-radius: 20px;
+        align-content: center;
+        z-index: 1;
+        /* padding:50px; */
+      }
+      #registrationSection .services__card img {
+        margin-bottom: 5px;
+      }
+      #registrationSection .services__card h4 {
+        font-size: 19px;
+      }
+      #registrationSection .services__card p {
+        font-size: 16px;
       }
 
       .input:focus,
@@ -99,7 +126,7 @@
       input:valid ~ label:not(.form-check-label),
       .form-select:focus ~ label:not(.form-check-label),
       .form-select:valid ~ label:not(.form-check-label) {
-        transform: translateY(-50%) scale(0.8);
+        transform: translateY(-50%) scale(0.9);
         background-color: #fff;
         padding: 0 0.2em;
         color: #212121;
@@ -118,22 +145,32 @@
       .form__section section {
         min-height: 100vh;
         align-content: center;
-        padding: 50px;
+        padding: 30px;
       }
       /* dorm css */
-      .form__section section:nth-of-type(1) {
-        /* background-color: #fbd288; */
-        background-image: url("https://placehold.co/1920x700/f1f1f1/f1f1f1");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-      }
       .form__section section:nth-of-type(even) {
-        background-color: rgb(181 185 193);
+        /* background-color: rgb(181 185 193); */
+        background-color: #ff9e00;
       }
       .form__section section:nth-of-type(odd) {
         background-color: #f8f9f0;
       }
+      .form__section section:nth-of-type(1) {
+        background-color: #ff9e00;
+        /* background-image: url("https://placehold.co/1920x700/f1f1f1/f1f1f1"); */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      /* #registrationSection::before {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #00000017;
+      } */
       #registrationSection .form__registration,
       .form__add__child,
       .form__login,
@@ -142,25 +179,44 @@
         border-color: #ffffff4d;
         border-radius: 20px;
         border-width: 2px;
-        padding: 50px;
+        padding: 25px;
         position: relative;
+        z-index: 1;
         background-color: #ffffff;
+        overflow: hidden;
+        position: relative;
         opacity: 0.8;
         box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
           rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
       }
-      /* #registrationSection .form__registration::before {
+      /* .form__registration::before {
         content: "";
         position: absolute;
-        top: 0px;
-        left: 0px;
+        top: 80%;
+        left: -20px;
         width: 100%;
-        height: 100%;
+        height: 10%;
         background-image: none;
-        background-color: #ffffff;
-        opacity: 0.09;
-        z-index: 0;
+        background-color: #fd34342b;
+        transform: rotate(-45deg);
+        opacity: 1;
+        z-index: -1;
       } */
+      #registrationSection .form__registration::after,
+      #loginSection .form__login::after {
+        content: "";
+        position: absolute;
+        bottom: 0px;
+        left: -20px;
+        width: 150%;
+        height: 20%;
+        background-image: none;
+        background-color: #fd343464;
+        transform: rotate(-44deg);
+        opacity: 1;
+        z-index: -1;
+      }
+
       .form__section .form__heading {
         font-size: 28px;
         font-weight: 600;
@@ -234,11 +290,11 @@
       }
       .yourcartcard .cart__items h6 {
         margin-bottom: 3px;
-        font-size: 15px;
+        font-size: 16px;
         font-weight: 600;
       }
       .yourcartcard .cart__items p {
-        font-size: 12px;
+        font-size: 13px;
         line-height: 1.3;
         margin-bottom: 5px;
         color: #212121de;
@@ -288,24 +344,96 @@
           padding: 20px 10px;
         }
       }
+      .left__side__bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        height: 100%;
+        width: 60%;
+        background-color: #000;
+        z-index: -1;
+      }
     </style>
   </head>
   <body>
     <!-- Navbar -->
 
-    <section class="form__section">
+    <section class="form__section position-relative">
+      <div class="left__side__bg"></div>
+      <div class="right__side__bg"></div>
       <!-- Step 1: Registration -->
       <section
         id="registrationSection"
         class="form-step form__step active form"
       >
-        <div class="container">
+        <div class="container-fluid">
           <div class="row justify-content-center">
-            <div class="col-md-7 form__registration">
+            <div class="col-md-8 d-md-block d-none align-content-center">
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <div class="text-center services__card">
+                    <img
+                      src="https://placehold.co/100x100"
+                      class="rounded-circle"
+                      alt=""
+                    />
+                    <h4>1. login/Signup</h4>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Deserunt, itaque!
+                    </p>
+                  </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <div class="text-center services__card">
+                    <img
+                      src="https://placehold.co/100x100"
+                      class="rounded-circle"
+                      alt=""
+                    />
+                    <h4>2. Add Child</h4>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Deserunt, itaque!
+                    </p>
+                  </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <div class="text-center services__card">
+                    <img
+                      src="https://placehold.co/100x100"
+                      class="rounded-circle"
+                      alt=""
+                    />
+                    <h4>3. Date & No. of Days</h4>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Deserunt, itaque!
+                    </p>
+                  </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <div class="text-center services__card">
+                    <img
+                      src="https://placehold.co/100x100"
+                      class="rounded-circle"
+                      alt=""
+                    />
+                    <h4>4. Book Your Ride As Per Availability</h4>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Deserunt, itaque!
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 align-content-center form__registration">
               <h4 class="form__heading text-center mb-3">Registration</h4>
               <form>
                 <div class="row">
-                  <div class="col-md-6">
+                  <div class="col-md-12">
                     <div class="input-group mb-3">
                       <input
                         required
@@ -320,7 +448,7 @@
                       >
                     </div>
                   </div>
-                  <div class="col-md-6">
+                  <div class="col-md-12">
                     <div class="input-group mb-3">
                       <input
                         required
@@ -335,7 +463,7 @@
                       >
                     </div>
                   </div>
-                  <div class="col-md-6">
+                  <div class="col-md-12">
                     <div class="input-group mb-3">
                       <input
                         required
@@ -348,7 +476,7 @@
                       <label class="user-label" for="email">Email</label>
                     </div>
                   </div>
-                  <div class="col-md-6">
+                  <div class="col-md-12">
                     <div class="input-group mb-3">
                       <input
                         type="tel"
@@ -391,9 +519,69 @@
 
       <!-- Step 2: Login -->
       <section id="loginSection" class="form-step form__step form">
-        <div class="container">
+        <div class="container-fluid">
           <div class="row justify-content-center">
-            <div class="col-md-7 form__login">
+            <div class="col-md-8 d-md-block d-none align-content-center">
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <div class="text-center services__card">
+                    <img
+                      src="https://placehold.co/100x100"
+                      class="rounded-circle"
+                      alt=""
+                    />
+                    <h4>1. login/Signup</h4>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Deserunt, itaque!
+                    </p>
+                  </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <div class="text-center services__card">
+                    <img
+                      src="https://placehold.co/100x100"
+                      class="rounded-circle"
+                      alt=""
+                    />
+                    <h4>2. Add Child</h4>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Deserunt, itaque!
+                    </p>
+                  </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <div class="text-center services__card">
+                    <img
+                      src="https://placehold.co/100x100"
+                      class="rounded-circle"
+                      alt=""
+                    />
+                    <h4>3. Date & No. of Days</h4>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Deserunt, itaque!
+                    </p>
+                  </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <div class="text-center services__card">
+                    <img
+                      src="https://placehold.co/100x100"
+                      class="rounded-circle"
+                      alt=""
+                    />
+                    <h4>4. Book Your Ride As Per Availability</h4>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Deserunt, itaque!
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 form__login">
               <h4 class="form__heading text-center mb-3">Login</h4>
               <form>
                 <div class="input-group mb-3">
@@ -432,7 +620,8 @@
       <section id="addChildSection" class="form-step form__step">
         <div class="container">
           <div class="row justify-content-center">
-            <div class="col-md-7 form__add__child">
+            <div class="col-md-6"></div>
+            <div class="col-md-6 form__add__child">
               <h4 class="form__heading text-center">Add Child</h4>
               <form>
                 <div class="row">

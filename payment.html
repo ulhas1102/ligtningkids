@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bootstrap 5 Starter Template</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
+    <link rel="stylesheet" href="public/assets/css/style.css" />
+  </head>
+  <body>
+    <section class="add-to-child-section pb-3" id="addChild">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="wizards__counter">
+              <ul class="steps__container">
+                <div class="connecter__line"></div>
+                <li class="steps active">
+                  <span class="counter">1</span>
+                  <h4>Login / Sign Up</h4>
+                </li>
+                <li class="steps active">
+                  <span class="counter">2</span>
+                  <h4>Add Child</h4>
+                </li>
+                <li class="steps active">
+                  <span class="counter">3</span>
+                  <h4>
+                    Select Booking Date <br />
+                    & Days
+                  </h4>
+                </li>
+                <li class="steps active">
+                  <span class="counter">4</span>
+                  <h4>Book your ride</h4>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="row justify-content-center">
+            <div class="col-md-12">
+              <div class="row">
+                <div class="col-md-8">
+                  <div class="card shadow payment__options">
+                    <h4>Select Payment Option</h4>
+                    <p>All transactions are secure and encrypted</p>
+                    <div
+                      class="border px-3 d-flex justify-content-between paypalOption"
+                    >
+                      <div class="form-check my-auto">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="paymentMethod"
+                          id="paypalOption"
+                        />
+                        <label class="form-check-label" for="paypalOption">
+                          Paypal
+                        </label>
+                      </div>
+                      <img
+                        src="public/assets/image/paypal.png"
+                        width="50px"
+                        alt=""
+                      />
+                    </div>
+                    <div class="border px-3 creditcardoption">
+                      <div class="d-flex justify-content-between py-2">
+                        <div class="form-check my-auto">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="paymentMethod"
+                            id="creditcard"
+                          />
+                          <label class="form-check-label" for="creditcard">
+                            Paypal
+                          </label>
+                        </div>
+                        <div class="">
+                          <img
+                            src="public/assets/image/visa.png"
+                            width="25px"
+                            alt=""
+                          />
+                          <img
+                            src="public/assets/image/card.png"
+                            width="25px"
+                            alt=""
+                          />
+                          <img
+                            src="public/assets/image/discover.png"
+                            width="25px"
+                            alt=""
+                          />
+                          <img
+                            src="public/assets/image/american-express.png"
+                            width="25px"
+                            alt=""
+                          />
+                        </div>
+                      </div>
+                      <p class="text-center small">
+                        Pay securely using your Visa, Meastro, Discover Or
+                        American Express card
+                      </p>
+                      <hr />
+                      <div class="mb-3">
+                        <label for="cardNumber">Card Number</label>
+                        <input
+                          type="text"
+                          id="cardNumber"
+                          class="form-control"
+                          placeholder="Card Number"
+                          maxlength="16"
+                          pattern="\d{16}"
+                          required
+                        />
+                      </div>
+                      <div class="row mb-3">
+                        <div class="col-md-6">
+                          <div class="mb-3">
+                            <label for="cardName">Name on Card</label>
+                            <input
+                              type="text"
+                              id="cardName"
+                              class="form-control"
+                              placeholder="Name on Card"
+                              required
+                            />
+                          </div>
+                        </div>
+                        <div class="col-md-3">
+                          <div class="">
+                            <label for="expiryDate">Expiry Date</label>
+                            <input
+                              type="text"
+                              id="expiryDate"
+                              class="form-control"
+                              placeholder="MM/YY"
+                              maxlength="5"
+                              pattern="\d{2}/\d{2}"
+                              required
+                            />
+                          </div>
+                        </div>
+                        <!-- CVV -->
+                        <div class="col-md-3">
+                          <div class="">
+                            <label for="cvv">CVV</label>
+                            <input
+                              type="text"
+                              id="cvv"
+                              class="form-control"
+                              placeholder="CVV"
+                              maxlength="3"
+                              pattern="\d{3}"
+                              required
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row mt-3">
+                      <div class="col-md-12">
+                        <button class="btn btn-block w-100 btn-primary">
+                          Pay|$1220.80
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="yourcartcard card shadow p-3">
+                    <h5>Your Cart (2)</h5>
+
+                    <hr />
+                    <div class="cart__items">
+                      <div class="row">
+                        <div class="col-md-3 align-content-center">
+                          <img
+                            src="https://placehold.co/50x50/b5b9c1/FFF"
+                            alt=""
+                          />
+                        </div>
+                        <div class="col-md-9">
+                          <h6>Annual Membership</h6>
+                          <p>
+                            One Way, Round trip will receive a 20% discount.
+                          </p>
+                          <span class="price">$120</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="cart__items">
+                      <div class="row">
+                        <div class="col-md-3 align-content-center">
+                          <img
+                            src="https://placehold.co/50x50/b5b9c1/FFF"
+                            alt=""
+                          />
+                        </div>
+                        <div class="col-md-9">
+                          <h6>Subscription</h6>
+                          <p>
+                            Price Per Ride. Same Ride, Same Time. Monday-Friday
+                          </p>
+                          <span class="price">$100</span>
+                        </div>
+                      </div>
+                    </div>
+                    <hr />
+                    <div class="summerycard">
+                      <div class="text">
+                        <p>Summery</p>
+                      </div>
+                      <div class="justify_payment">
+                        <span class="">Subtotal</span><span class="">$220</span>
+                      </div>
+                      <div class="justify_payment">
+                        <span class="">Tax</span><span class="">$10</span>
+                      </div>
+                      <hr />
+                      <div class="justify_payment">
+                        <span class="">Total</span
+                        ><span class="bold">$230</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script>
+      // JavaScript to add success icon to active steps active
+      document.querySelectorAll('.steps').forEach((step) => {
+        if (step.classList.contains('active')) {
+          step.classList.add('success');
+        }
+      });
+    </script>
+  </body>
+</html>

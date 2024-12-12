@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bootstrap 5 Starter Template</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
+    <link rel="stylesheet" href="public/assets/css/style.css" />
+  </head>
+  <body>
+    <section
+      class="position-relative background__container__section"
+      id="loginSection"
+    >
+      <div class="left__section">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="wizards__counter">
+                <ul class="steps__container">
+                  <div class="connecter__line"></div>
+                  <li class="steps">
+                    <span class="counter">1</span>
+                    <h4>Login / Sign Up</h4>
+                    <p class="mb-0 small">Create or access your account.</p>
+                  </li>
+                  <li class="steps">
+                    <span class="counter">2</span>
+                    <h4>Add Child</h4>
+                    <p class="mb-0 small">Add your child's details.</p>
+                  </li>
+                  <li class="steps">
+                    <span class="counter">3</span>
+                    <h4>
+                      Select Booking Date <br />
+                      & Days
+                    </h4>
+                    <p class="mb-0 small">
+                      Choose the desired date and schedule.
+                    </p>
+                  </li>
+                  <li class="steps">
+                    <span class="counter">4</span>
+                    <h4>Book your ride</h4>
+                    <p class="mb-0 small">
+                      Confirm your booking based on availability.
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <div class="text-center services__card">
+                <!-- <img
+                    src="https://placehold.co/80x80"
+                    class="rounded-circle"
+                    alt=""
+                  /> -->
+                <h4>Single Ride 32 One Way.</h4>
+                <p>Round trip will receive a 20% discount.</p>
+                <span class="price">32$</span>
+              </div>
+            </div>
+            <div class="col-md-6 mb-3">
+              <div class="text-center services__card">
+                <!-- <img
+                    src="https://placehold.co/80x80"
+                    class="rounded-circle"
+                    alt=""
+                  /> -->
+                <h4>2-3 Rides Per Week.</h4>
+                <p>Price Per Ride. Same Ride, Same Time.</p>
+                <span class="price">22$</span>
+              </div>
+            </div>
+            <div class="col-md-6 mb-3">
+              <div class="text-center services__card">
+                <!-- <img
+                    src="https://placehold.co/80x80"
+                    class="rounded-circle"
+                    alt=""
+                  /> -->
+                <h4>5 Rides Per Week.</h4>
+                <p>Price Per Ride. Same Ride, Same Time. Monday-Friday.</p>
+                <span class="price">18$</span>
+              </div>
+            </div>
+            <div class="col-md-6 mb-3">
+              <div class="text-center services__card">
+                <!-- <img
+                    src="https://placehold.co/80x80"
+                    class="rounded-circle"
+                    alt=""
+                  /> -->
+                <h4>4. Book Your Ride As Per Availability</h4>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Deserunt, itaque!
+                </p>
+                <span class="price">16$</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="right__section">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-11 form__login">
+              <div class="text-center mb-3">
+                <img
+                  src="public/assets/image/logo/lightning-kids-logo.webp"
+                  class="text-center"
+                  alt=""
+                />
+              </div>
+              <h4 class="form__heading text-center mb-3">Login</h4>
+              <form>
+                <div class="input-group mb-3">
+                  <input
+                    type="email"
+                    id="loginEmail"
+                    class="form-control input"
+                    required
+                  />
+                  <label class="user-label" for="loginEmail">Email</label>
+                </div>
+                <div class="input-group mb-3">
+                  <input
+                    type="password"
+                    id="loginPassword"
+                    class="form-control input"
+                    required
+                  />
+                  <label class="user-label" for="loginPassword">Password</label>
+                </div>
+                <div class="text-center">
+                  <p class="small text-end">
+                    <a href="" class="">Forgot Password</a>
+                  </p>
+                  <button
+                    type="button"
+                    class="btn common__btn_one next-step px-md-5 px-5"
+                  >
+                    <a href="add-child.html" class="">Sign In</a>
+                  </button>
+                  <p class="small mt-3 text-end">
+                    don't have an account?<a href="sign-up.html"> Sign up</a>
+                  </p>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script>
+      // JavaScript to add success icon to active steps
+      document.querySelectorAll(".steps").forEach((step) => {
+        if (step.classList.contains("active")) {
+          step.classList.add("success");
+        }
+      });
+    </script>
+  </body>
+</html>

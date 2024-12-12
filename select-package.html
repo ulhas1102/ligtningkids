@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bootstrap 5 Starter Template</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
+  <link rel="stylesheet" href="public/assets/css/style.css" />
+  <style>
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <section class="add-to-child-section pb-3" id="addChild">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="wizards__counter">
+            <ul class="steps__container">
+              <div class="connecter__line"></div>
+              <li class="steps active">
+                <span class="counter">1</span>
+                <h4>Login / Sign Up</h4>
+                <p class="mb-0 small">Create or access your account.</p>
+              </li>
+              <li class="steps active">
+                <span class="counter">2</span>
+                <h4>Add Child</h4>
+                <p class="mb-0 small">Add your child's details.</p>
+              </li>
+              <li class="steps ">
+                <span class="counter">3</span>
+                <h4>
+                  Select Booking Date <br />
+                  & Days
+                </h4>
+                <p class="mb-0 small">
+                  Choose the desired date and schedule.
+                </p>
+              </li>
+              <li class="steps">
+                <span class="counter">4</span>
+                <h4>Book your ride</h4>
+                <p class="mb-0 small">
+                  Confirm your booking based on availability.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <div class="shadow select__package__form">
+            <div class="card-body">
+              <form>
+                <div class="row">
+                  <h2 class="text-center">Choose Day & Date</h2>
+                  <div class="col-md-12 mt-2">
+                    <div class="input-group mb-3">
+                      <input type="text" id="dob" class="input form-control input" required />
+                      <label class="user-label next-step" for="dob">Select Start Date</label>
+                    </div>
+                  </div>
+                  <div class="mb-3 col-md-12 select__days">
+                    <label class="form-label">Choose the days:</label>
+                    <br />
+                    <div class="form-check form-check-inline">
+                      <label class="form-check-label" for="monday">Mon</label>
+                      <br />
+                      <input type="checkbox" class="form-check-input day-checkbox" id="monday" value="Monday" />
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <label class="form-check-label" for="tuesday">Tue</label><br />
+                      <input type="checkbox" class="form-check-input day-checkbox" id="tuesday" value="Tuesday" />
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <label class="form-check-label" for="wednesday">Wed</label><br />
+                      <input type="checkbox" class="form-check-input day-checkbox" id="wednesday" value="Wednesday" />
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <label class="form-check-label" for="thursday">Thu</label><br />
+                      <input type="checkbox" class="form-check-input day-checkbox" id="thursday" value="Thursday" />
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <label class="form-check-label" for="friday">Fri</label><br />
+                      <input type="checkbox" class="form-check-input day-checkbox" id="friday" value="Friday" />
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <label class="form-check-label" for="saturday">Sat</label><br />
+                      <input type="checkbox" class="form-check-input day-checkbox" id="saturday" value="Saturday" />
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <label class="form-check-label" for="sunday">Sun</label><br />
+                      <input type="checkbox" class="form-check-input day-checkbox" id="sunday" value="Sunday" />
+                    </div>
+                  </div>
+                  <!-- <div id="addressDiv" class="hidden addressDiv">
+                   <div class="input">
+                    <label class="day">Monday</label>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-check form-check-inline mb-3">
+                          <label class="form-check-label" for="monday">Before School</label>
+                          <input type="checkbox" class="form-check-input" id="monday" value="Monday" />
+                        </div>
+                        <div class="mb-3 input-group">
+                          <input type="text" class="form-control input" id="beforePickup" placeholder="Enter address">
+                          <label for="beforePickup" class="form-label user-label"> Pickup Address:</label>
+                        </div>
+                        <div class="mb-3 input-group">
+                          <input type="text" class="form-control input" id="beforeDrop" placeholder="Enter address">
+                          <label for="beforeDrop" class="form-label user-label"> Drop Address:</label>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-check form-check-inline mb-3">
+                          <label class="form-check-label" for="monday">After School</label>
+                          <input type="checkbox" class="form-check-input " id="monday" value="Monday" />
+                        </div>
+                        <div class="mb-3 input-group">
+                          <input type="text" class="form-control input" id="afterPickup" placeholder="Enter address">
+                          <label for="afterPickup" class="form-label user-label"> Pickup Address:</label>
+                        </div>
+                        <div class="mb-3 input-group">
+                          <input type="text" class="form-control input" id="afterDrop" placeholder="Enter address">
+                          <label for="afterDrop" class="form-label user-label"> Drop Address:</label>
+                        </div>
+                      </div>
+                    </div>
+                   </div>
+                  </div> -->
+                  <!-- Container to append dynamic address divs -->
+                  <div id="address" class="mt-4"></div>
+                </div>
+                <div class="col-md-12 text-center">
+                  <button type="submit" class="btn common__btn_one next-step">
+                    <a href="review-book.html" class=""> Check Availability </a>
+                  </button>
+                </div>
+            </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script>
+    const checkboxes = document.querySelectorAll('.day-checkbox');
+    const addressContainer = document.getElementById('address');
+
+    checkboxes.forEach((checkbox) => {
+      checkbox.addEventListener('change', () => {
+        const day = checkbox.value;
+        const existingDiv = document.getElementById(`addressDiv-${day}`);
+
+        if (checkbox.checked) {
+          if (!existingDiv) {
+            // Create the dynamic div
+            const div = document.createElement('div');
+            div.id = `addressDiv-${day}`;
+            div.className = 'addressDiv';
+            div.innerHTML = `
+              <div class="input">
+                <label class="day">${day}</label>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-check form-check-inline mb-3">
+                      <label class="form-check-label" for="before-${day}">Before School</label>
+                      <input type="checkbox" class="form-check-input before-checkbox" id="before-${day}" value="Before ${day}" />
+                    </div>
+                    <div id="beforeFields-${day}" class="hidden">
+                      <div class="mb-3 input-group">
+                        <input type="text" class="form-control input" id="beforePickup-${day}" placeholder="Enter address">
+                        <label for="beforePickup-${day}" class="form-label user-label">Pickup Address:</label>
+                      </div>
+                      <div class="mb-3 input-group">
+                        <input type="text" class="form-control input" id="beforeDrop-${day}" placeholder="Enter address">
+                        <label for="beforeDrop-${day}" class="form-label user-label">Drop Address:</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-check form-check-inline mb-3">
+                      <label class="form-check-label" for="after-${day}">After School</label>
+                      <input type="checkbox" class="form-check-input after-checkbox" id="after-${day}" value="After ${day}" />
+                    </div>
+                    <div id="afterFields-${day}" class="hidden">
+                      <div class="mb-3 input-group">
+                        <input type="text" class="form-control input" id="afterPickup-${day}" placeholder="Enter address">
+                        <label for="afterPickup-${day}" class="form-label user-label">Pickup Address:</label>
+                      </div>
+                      <div class="mb-3 input-group">
+                        <input type="text" class="form-control input" id="afterDrop-${day}" placeholder="Enter address">
+                        <label for="afterDrop-${day}" class="form-label user-label">Drop Address:</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            `;
+            addressContainer.appendChild(div);
+
+            // Add event listeners for Before and After checkboxes
+            document.getElementById(`before-${day}`).addEventListener('change', (e) => {
+              const beforeFields = document.getElementById(`beforeFields-${day}`);
+              beforeFields.classList.toggle('hidden', !e.target.checked);
+            });
+
+            document.getElementById(`after-${day}`).addEventListener('change', (e) => {
+              const afterFields = document.getElementById(`afterFields-${day}`);
+              afterFields.classList.toggle('hidden', !e.target.checked);
+            });
+          }
+        } else {
+          // Remove the div if checkbox is unchecked
+          if (existingDiv) {
+            existingDiv.remove();
+          }
+        }
+      });
+    });
+  </script>
+  <script>
+    // JavaScript to add success icon to active steps
+    document.querySelectorAll('.steps').forEach((step) => {
+      if (step.classList.contains('active')) {
+        step.classList.add('success');
+      }
+    });
+  </script>
+</body>
+
+</html>

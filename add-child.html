@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bootstrap 5 Starter Template</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
+    <link rel="stylesheet" href="public/assets/css/style.css" />
+  </head>
+  <body>
+    <section class="add-to-child-section pb-3" id="addChild">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="wizards__counter">
+              <ul class="steps__container">
+                <div class="connecter__line"></div>
+                <li class="steps active">
+                  <span class="counter">1</span>
+                  <h4>Login / Sign Up</h4>
+                </li>
+                <li class="steps ">
+                  <span class="counter">2</span>
+                  <h4>Add Child</h4>
+                </li>
+                <li class="steps">
+                  <span class="counter">3</span>
+                  <h4>
+                    Select Booking Date <br />
+                    & Days
+                  </h4>
+                </li>
+                <li class="steps">
+                  <span class="counter">4</span>
+                  <h4>Book your ride</h4>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- <div class="col-md-6">
+            <img src="public/assets/image/file.png" alt="" class="img-fluid" />
+          </div> -->
+          <div class="col-md-8 form__add__child px-md-5">
+            <h4 class="form__heading text-center mb-4">Add Child</h4>
+            <form>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="input-group mb-3">
+                    <input
+                      type="text"
+                      id="childFirstName"
+                      class="input form-control input"
+                      required
+                    />
+                    <label class="user-label" for="childFirstName"
+                      >First Name</label
+                    >
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="input-group mb-3">
+                    <input
+                      type="text"
+                      id="childLastName"
+                      class="input form-control input"
+                      required
+                    />
+                    <label class="user-label" for="childLastName"
+                      >Last Name</label
+                    >
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="input-group mb-3">
+                    <input
+                      type="text"
+                      id="classGrade"
+                      class="input form-control input"
+                      required
+                    />
+                    <label class="user-label" for="classGrade"
+                      >Class Grade</label
+                    >
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="input-group mb-3">
+                    <input
+                      type="text"
+                      id="dob"
+                      class="input form-control input"
+                      required
+                    />
+                    <label class="user-label" for="dob">Date Of Birth</label>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="input-group mb-3">
+                    <input
+                      type="text"
+                      id="teachers-name"
+                      class="input form-control input"
+                      required
+                    />
+                    <label class="user-label" for="teachers-name"
+                      >Teacher's Name</label
+                    >
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="input-group mb-3">
+                    <input
+                      type="text"
+                      id="allergies"
+                      class="input form-control input"
+                      required
+                    />
+                    <label class="user-label" for="allergies">Allergies</label>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="input-group mb-3">
+                    <input
+                      type="text"
+                      id="pickupAddress"
+                      class="input form-control input"
+                      required
+                    />
+                    <label class="user-label" for="pickupAddress"
+                      >Pickup Address</label
+                    >
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="input-group mb-3">
+                    <select
+                      id="selectSchool"
+                      class="form-select input"
+                      required
+                    >
+                      <option value="" disabled selected></option>
+                      <option value="school1">School 1</option>
+                      <option value="school2">School 2</option>
+                    </select>
+                    <label class="user-label" for="selectSchool"
+                      >Select School</label
+                    >
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="input-group mb-3">
+                    <label class="user-label" for="childImage"
+                      >Child Photo</label
+                    >
+                    <input
+                      type="file"
+                      id="childImage"
+                      class="input form-control"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div class="form-group mb-3">
+                  <label for="childSeat mr-3">Child Seat</label>
+                  <div class="form-check form-check-inline">
+                    <input
+                      type="radio"
+                      id="childSeatYes"
+                      name="childSeat"
+                      class="form-check-input"
+                      value="Yes"
+                      required
+                    />
+                    <label for="childSeatYes" class="form-check-label"
+                      >Yes</label
+                    >
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input
+                      type="radio"
+                      id="childSeatNo"
+                      name="childSeat"
+                      class="form-check-input"
+                      value="No"
+                      required
+                    />
+                    <label for="childSeatNo" class="form-check-label">No</label>
+                  </div>
+                </div>
+                <div class="text-center">
+                  <button
+                    type="submit"
+                    class="btn common__btn_one next-step px-md-5 px-5"
+                  >
+                    <a href="select-package.html">Submit</a>
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script>
+      // JavaScript to add success icon to active steps
+      document.querySelectorAll('.steps').forEach((step) => {
+        if (step.classList.contains('active')) {
+          step.classList.add('success');
+        }
+      });
+    </script>
+  </body>
+</html>
